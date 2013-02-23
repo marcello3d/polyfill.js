@@ -1,0 +1,25 @@
+{
+    "name": "polyfill",
+    "version": "0.1.0",
+    "description": "JavaScript polyfills",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/marcello3d/polyfill.js"
+    },
+    "keywords": [
+        "polyfill",
+        "js",
+        "es5",
+        "es6"
+    ],
+    "dependencies": {
+        "json3":"3.2.4"
+    },
+
+    "author": "Marcello Bastea-Forte and others",
+    "license": "zlib"
+}
