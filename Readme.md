@@ -1,4 +1,4 @@
-Polyfill [![Build Status](https://travis-ci.org/marcello3d/polyfill.png)](https://travis-ci.org/marcello3d/polyfill)
+Polyfill [![Build Status](https://travis-ci.org/marcello3d/polyfill.js.png)](https://travis-ci.org/marcello3d/polyfill.js)
 ==================
 A collection of polyfills for standard JavaScript features.
 
