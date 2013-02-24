@@ -8,6 +8,8 @@ Notes
 This is intended for use with [node-shimmy](https://github.com/marcello3d/node-shimmy), and not really a standalone 
 module.
 
+[![browser support](http://ci.testling.com/USER/PROJECT.png)](http://ci.testling.com/USER/PROJECT)
+
 Usage
 -----
 
@@ -25,8 +27,6 @@ if (polyfill.defines('Date.now')) {
 // Print out list of defined polyfill names
 console.dir(polyfill.names)
 ```
-
-
 
 License
 -------
