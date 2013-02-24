@@ -19,7 +19,9 @@
     "dependencies": {
         "json3":"3.2.4"
     },
-
+    "devDependencies": {
+        "mocha":"1.8.1"
+    },
     "author": "Marcello Bastea-Forte and others",
     "license": "zlib",
     "testling": {
