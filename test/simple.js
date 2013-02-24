@@ -5,16 +5,16 @@ var polyfill = require('../index.js')
 suite('Simple')
 
 test('test feature existence', function() {
-    assert.ok(polyfill.supports('Array.prototype.every'))
-    assert.ok(polyfill.supports('Array.prototype.filter'))
-    assert.ok(polyfill.supports('Array.prototype.forEach'))
-    assert.ok(polyfill.supports('Array.prototype.reduce'))
-    assert.ok(polyfill.supports('Date.now'))
+    assert.ok(polyfill('Array.prototype.every'))
+    assert.ok(polyfill('Array.prototype.filter'))
+    assert.ok(polyfill('Array.prototype.forEach'))
+    assert.ok(polyfill('Array.prototype.reduce'))
+    assert.ok(polyfill('Date.now'))
 })
 
 test('test feature non-existence', function() {
-    assert.ok(!polyfill.supports('String.prototype.blink'))
-    assert.ok(!polyfill.supports('foo'))
+    assert.ok(!polyfill('String.prototype.blink'))
+    assert.ok(!polyfill('foo'))
 })
 
 test('check existence of feature code', function(done) {

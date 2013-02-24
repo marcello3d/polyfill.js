@@ -2,6 +2,19 @@ var fs = require('fs')
 var path = require('path')
 
 var polyfills = {}
+
+module.exports = function(featureName, callback) {
+    if (!featureName) return Object.keys(polyfills)
+    var defined = polyfills[featureName]
+    if (!callback) return !!defined
+    if (defined) {
+        fs.readFile(polyfills[featureName], 'utf8', callback)
+    } else {
+        callback(new Error("Unknown feature: " + featureName))
+    }
+}
+
+// Add JSON dependency
 polyfills.JSON = path.join(__dirname, 'node_modules/json3/lib/json3.js')
 
 function add(group, names) {
@@ -10,6 +23,7 @@ function add(group, names) {
         polyfills[name] = path.join(base, name+'.js')
     })
 } 
+
 add('es5', [
     'Array.isArray',
     'Array.prototype.every',
@@ -27,6 +41,7 @@ add('es5', [
     'Object.keys',
     'String.prototype.trim'
 ])
+
 add('es6', [
     'Number.isFinite',
     'Number.isInteger',
@@ -39,15 +54,7 @@ add('es6', [
     'String.prototype.startsWith',
     'String.prototype.toArray'
 ])
+
 add('non-standard', [ 
     'String.prototype.substr' 
 ])
-
-module.exports = function getShim(featureName, callback) {
-    if (!polyfills[featureName]) return callback(new Error("Unknown feature: "+featureName))
-    fs.readFile(polyfills[featureName], 'utf8', callback)
-}
-module.exports.defines = function(featureName) {
-    return !!polyfills[featureName]
-}
-module.exports.names = Object.keys(polyfills)
