@@ -1,6 +1,6 @@
 var assert = require('assert')
 
-suite('es5-Array')
+suite('es5')
 
 var EMPTY_ARRAY = []
 var ARRAY_123 = [1,2,3]
