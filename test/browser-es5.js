@@ -7,9 +7,9 @@ test('Date.now', function() {
     assert.ok(Date.now)
 })
 
-test('Date.prototype.isISOString', function() {
-    require('../es5/Date.prototype.isISOString.js')    
-    assert.ok(Date.prototype.isISOString)
+test('Date.prototype.toISOString', function() {
+    require('../es5/Date.prototype.toISOString.js')    
+    assert.ok(Date.prototype.toISOString)
 })
 
 test('Function.prototype.bind', function() {
@@ -26,4 +26,3 @@ test('String.prototype.trim', function() {
     require('../es5/String.prototype.trim.js')    
     assert.ok(String.prototype.trim)
 })
-

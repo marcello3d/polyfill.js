@@ -21,5 +21,18 @@
     },
 
     "author": "Marcello Bastea-Forte and others",
-    "license": "zlib"
+    "license": "zlib",
+    "testling": {
+        "files": "test/browser-*.js",
+        "browsers": [
+            "ie/6..latest",
+            "firefox/3.0..latest",
+            "chrome/4.0..latest",
+            "safari/5.0..latest",
+            "opera/10.0..latest",
+            "iphone/4.0..latest",
+            "ipad/4.0..latest"
+        ],
+        "harness": "mocha-qunit"
+    }
 }
