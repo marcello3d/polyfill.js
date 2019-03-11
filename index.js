@@ -52,7 +52,8 @@ add('es6', [
     'String.prototype.contains',
     'String.prototype.endsWith',
     'String.prototype.startsWith',
-    'String.prototype.toArray'
+    'String.prototype.toArray',
+    'String.prototype.repeat'
 ])
 
 add('non-standard', [ 
